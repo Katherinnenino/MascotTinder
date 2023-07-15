@@ -1,22 +1,16 @@
-<div id="<%= dom_id pet %>">
-  <p>
-    <strong>Name:</strong>
-    <%= pet.name %>
-  </p>
-
-  <p>
-    <strong>Race:</strong>
-    <%= pet.race %>
-  </p>
-
-  <p>
-    <strong>Age:</strong>
-    <%= pet.age %>
-  </p>
-
-  <p>
-    <strong>Gender:</strong>
-    <%= pet.gender %>
-  </p>
-
+<div class="col-3">
+ <div class="card">
+ <%= image_tag pet.images[0], class: 'card-img-top' %>
+ <div class="card-body">
+ <div class="owner-avatar">
+ <%= image_tag pet.user.images[0].url, class: 'rounded-circle w-50' %>
+ </div>
+ <h5 class="card-title"><%= pet.name %></h5>
+ <p class="card-text">
+ <strong>Raza:</strong><%= pet.race%><br>
+ <strong>Edad:</strong><%= pet.age %><br>
+ <strong>Género:</strong><%= pet.gender %>
+ </p>
+ </div>
+ </div>
 </div>
